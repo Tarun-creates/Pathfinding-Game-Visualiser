@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container fade-in">
+        <div class="header">
+            <h1 class="title">🎯 Pathfinder Game</h1>
+            <p class="subtitle">Find the optimal path through obstacles using A* algorithm</p>
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="start">📍 Set Start</button>
+            <button class="mode-btn" data-mode="end">🎯 Set End</button>
+            <button class="mode-btn" data-mode="obstacle">🧱 Add Obstacles</button>
+            <button class="mode-btn" data-mode="erase">🧽 Erase</button>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="findPath">🚀 Find Path</button>
+            <button class="btn btn-secondary" id="clearPath">🔄 Clear Path</button>
+            <button class="btn btn-success" id="generateMaze">🌟 Random Maze</button>
+        </div>
+
+        <div class="status" id="status">Click on the grid to set start and end points, then find your path!</div>
+
+        <div class="grid-container">
+            <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(45deg, #00d2d3, #54a0ff);"></div>
+                <span>Start Point</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);"></div>
+                <span>End Point</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(45deg, #2c2c54, #40407a);"></div>
+                <span>Obstacles</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(45deg, #feca57, #ff9ff3);"></div>
+                <span>Path</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
